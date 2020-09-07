@@ -2,8 +2,8 @@
 name: "Roll Along"
 title: "Roll Along"
 description: "Roll Along with us on our travel adventure"
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: 'assets/images/Scamp.png'
+favicon: 'assets/images/favicon.ico'
 baseurl: /
 google_analytics: ''
 disqus: ''
