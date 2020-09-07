@@ -1,7 +1,7 @@
 # Site
 name: "Roll Along"
 title: "Roll Along"
-description: "Roll Along with us on our travel adventure"
+description: "Roll Along: a travel adventure"
 logo: 'assets/images/Scamp.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: /
