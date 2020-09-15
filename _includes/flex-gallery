@@ -1,0 +1,52 @@
+{% assign imagepath  = page.imagepath  | default: site.imagepath  | default: "" %}
+
+{% if include.id %}
+  {% assign flexgallery = page[include.id] %}
+{% else %}
+  {% assign flexgallery = page.flexgallery %}
+{% endif %}
+
+{% if include.height %} 
+  {% assign height = include.height %}
+{% else %}
+  {% assign height = "30vh" %}
+{% endif %}
+
+  <ul class=flexgallery>
+  {% for img in flexgallery %}
+    {% if img.image %} 
+      {% assign image   = img.image %}
+      {% assign alt     = img.alt %}
+      {% if img.href %} 
+        {% assign href    = img.href %}
+      {% else %}
+        {% assign href    = img.image %}
+      {% endif %}
+      {% assign caption = img.caption %}
+    {% else %}
+      {% assign image = img %}
+      {% assign href  = img %}
+      {% assign alt   = "" %}
+    {% endif %}
+        
+    {% if image contains "://" %}
+    {% else %}
+      {% assign image = image | prepend: "/" | prepend: imagepath  | relative_url %}
+    {% endif %}
+
+    {% if href contains "://" %}
+    {% else %}
+      {% assign href = href | prepend: "/" | prepend: imagepath  | relative_url %}
+    {% endif %}
+
+    <li class=flexgallery style="height: {{ height }}; padding: 2px">
+      <a class=flexgallery href="{{ href }}">
+        <img class=flexgallery 
+          style="height: {{ height }}" src="{{ image }}"
+          href="{{ href }}"
+          alt="{{ alt }}">
+      </a>
+    </li>
+  {% endfor %}
+  <li class=flexgallery></li>
+  </ul>

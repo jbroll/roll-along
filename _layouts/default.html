@@ -10,6 +10,10 @@
 
 {% seo %}
     
+{% if page.flexgallery %}
+    <link href="{{ site.baseurl }}/assets/css/flexgallery.css" rel="stylesheet">
+{% endif %}
+
 <link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet">
 
 <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
@@ -32,31 +36,12 @@ ga('send', 'pageview');
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body>
-	<!-- defer loading of font and font awesome -->
-	<noscript id="deferred-styles">
-		<link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	</noscript>
 
 <div class="site-content {% if page.url == '/' %} firstpage {% endif %}">
 
 <div class="container">
 
-    <!-- Site Logo/Name
-    ================================================== -->
-   
-    <a class="navbar-brand" href="{{ site.baseurl }}/">
-        <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
-    </a>  
-   
-
-    <!-- Site Tag
-    ================================================== -->
-    {% if page.url == '/' %}
-        <p class="sitetag">
-            {{ site.description }}
-        </p>
-    {% endif %}
+    {% include titlebar title=page.title %}
 
     <!-- Content
     ================================================== -->

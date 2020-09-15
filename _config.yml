@@ -4,7 +4,7 @@ title: "Roll Along"
 description: "Roll Along: a travel adventure"
 logo: 'assets/images/Scamp.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: /
+baseurl: ''
 google_analytics: ''
 disqus: ''
 mailchimp-list: ''
