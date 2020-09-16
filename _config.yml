@@ -2,7 +2,7 @@
 name: "Roll Along"
 title: "Roll Along"
 description: "Roll Along: a travel adventure"
-logo: 'assets/images/Scamp.png'
+logo: 'assets/images/Scamp-white.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ''
 google_analytics: ''
@@ -11,6 +11,10 @@ mailchimp-list: ''
 include: ["_pages"]
 permalink: /:title/
 email: john@rkroll.com
+
+menu: 
+  - "Home"
+  - "About"
 
 # Authors
 authors:

@@ -1,0 +1,28 @@
+<!-- Site Logo/Page Title
+================================================== -->
+   
+<div style="border-radius: 20px; background-size: cover; background-position: top right; background-image: url(/assets/images/20130416_170009.jpg);">
+    <div 
+        style="height:90px; margin: 10px;    display: flex; justify-content: space-between; align-items: top;"
+    >
+
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+            <img 
+                src="{{ site.baseurl }}/{{ site.logo }}" 
+                alt="{{ site.name }}"
+            >
+        </a>  
+
+
+        <div style="display: flex; margin-top: 10px;">
+            <h3 style="margin-right: 20px"><a href="/" }}">Home</a></h3>
+            <h3 style="margin-right: 20px"><a href="/about" }}">About</a></h3>
+        </div>
+
+    </div>
+        <div style="margin: 10px">
+            <p class="sitetag">
+                {{ site.description }}
+            </p>
+        </div>
+</div>
