@@ -7,10 +7,10 @@ favicon: 'assets/images/favicon.ico'
 baseurl: ''
 google_analytics: ''
 disqus: ''
-mailchimp-list: ''
 include: ["_pages"]
 permalink: /:title/
 email: john@rkroll.com
+comments: false
 
 menu: 
   - "Home"
@@ -23,16 +23,17 @@ authors:
     display_name: John
     gravatar: fc1792b16d25a164ff8e46354c884cc3
     email: john@rkroll.com
-    web: ''
+    #web: ''
     description: "One half of John & Rae's adventure"
   rachel:
     name: Rachel
     display_name: Rachel    
-    avatar: ''
-    gravatar: ''
+    # avatar: ""
+    # gravatar: ""
     email: rkroll@rkroll.com
-    web: ''
+    #web: ''
     description: "One half of John & Rae's adventure"
+
 
 # Plugins
 plugins:
