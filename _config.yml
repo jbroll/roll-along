@@ -28,8 +28,7 @@ authors:
   rachel:
     name: Rachel
     display_name: Rachel    
-    # avatar: ""
-    # gravatar: ""
+    avatar: "assets/images/rachel.png"
     email: rkroll@rkroll.com
     #web: ''
     description: "One half of John & Rae's adventure"
