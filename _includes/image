@@ -11,6 +11,7 @@
   <figure>
 {% endif %}
 
+
     {% if include.url %}
         <a href="{{ include.url }}">
     {% endif %}
