@@ -1,0 +1,30 @@
+{% if include.float %}
+    {% assign float = include.float | prepend: "float: " | append: ";" %}
+{% endif %}
+{% if include.width %}
+    {% assign width = include.width | prepend: "width: " | append: ";" %}
+{% endif %}
+
+{% if float or width %}
+  <figure style="{{ float }}{{ width }}">
+{% else %}
+  <figure>
+{% endif %}
+
+    {% if include.url %}
+        <a href="{{ include.url }}">
+    {% endif %}
+    <img
+        {% if include.src contains "//:" %}
+            src="{{ include.src }}"
+        {% else %}
+            src="{{ site.baseurl }}/assets/images/{{ include.src }}"
+        {% endif %}
+        alt="{{ include.alt }}">
+    {% if include.url %}
+        </a>
+    {% endif %}
+    {% if include.caption %}
+        <figcaption>{{ include.caption }}</figcaption>
+    {% endif %}
+</figure>
