@@ -48,5 +48,5 @@
       </a>
     </li>
   {% endfor %}
-  <li class=flexgallery></li>
+  <li class=flexgallery style="height: 1px"></li>
   </ul>
