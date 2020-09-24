@@ -42,11 +42,10 @@
     <li class=flexgallery style="height: {{ height }}; padding: 2px">
       <a class=flexgallery href="{{ href }}">
         <img class=flexgallery 
-          style="height: {{ height }}" src="{{ image }}"
+          src="{{ image }}"
           href="{{ href }}"
           alt="{{ alt }}">
       </a>
     </li>
   {% endfor %}
-  <li class=flexgallery style="height: 1px"></li>
   </ul>

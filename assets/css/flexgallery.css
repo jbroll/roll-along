@@ -8,27 +8,13 @@
   }
   
   li.flexgallery {
-    height: 40vh;
-    flex-grow: 1;
     list-style-type: none;
   }
 
-  a.flexgallery {
-    flex-grow: 1;
-  }
-  
-  li.flexgallery:last-child {
-    /* There's no science in using "10" here. 
-        In all my testing, this delivered the best results.
-     */
-    flex-grow: 10;
-    list-style-type: none;
-  }
-  
   img.flexgallery {
     max-height: 100%;
     min-width: 100%;
-    xobject-fit: cover;
+    object-fit: cover;
     vertical-align: bottom;
   }
   
@@ -36,7 +22,7 @@
    */
   @media (max-aspect-ratio: 1/1) {
     li.flexgallery {
-      height: 30vh;
+      height: 40vh;
       list-style-type: none;
     }
   }
