@@ -1,6 +1,12 @@
 <!-- begin post -->
 {% assign author = site.authors[post.author] %}
 
+{% if include.excerpt %}
+  {% assign excerpt = include.excerpt %}
+{% else %}
+  {% assign excerpt = 30 %}
+{% endif %}
+
 <div class="blog-grid-item">
     <div class="card h-100">
         <div class="maxthumb">
@@ -25,7 +31,7 @@
                 </div>
                 {% endif %}
             </h2>
-            <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords:100 }}</h4>
+            <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords: excerpt }}</h4>
         </div>
         <div class="card-footer bg-white">
             <div class="wrapfooter">

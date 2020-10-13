@@ -7,8 +7,10 @@ title: "Roll Along: a travel adventure"
 <!-- Posts Index
 ================================================== -->
 <div class="blog-grid-container">
+    {% assign excerpt = 100 %}
     {% for post in paginator.posts %}
-        {% include postbox.html %}
+        {% include postbox.html excerpt=excerpt %}
+        {% assign excerpt = 10 %}
     {% endfor %}
 </div>
 
