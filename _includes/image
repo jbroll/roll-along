@@ -5,26 +5,27 @@
     {% assign width = include.width | prepend: "width: " | append: ";" %}
 {% endif %}
 
+{% if include.src contains "//:" %}
+    {% assign src = include.src %}
+{% else %}
+    {% assign src = site.baseurl | append: "/assets/images/" | append: include.src %}
+{% endif %}
+
+{% if include.url %}
+    {% assign url = include.url %}
+{% else %}
+    {% assign url = src %}
+{% endif %}
+
 {% if float or width %}
   <figure style="{{ float }}{{ width }}">
 {% else %}
   <figure>
 {% endif %}
 
-
-    {% if include.url %}
-        <a href="{{ include.url }}">
-    {% endif %}
-    <img
-        {% if include.src contains "//:" %}
-            src="{{ include.src }}"
-        {% else %}
-            src="{{ site.baseurl }}/assets/images/{{ include.src }}"
-        {% endif %}
-        alt="{{ include.alt }}">
-    {% if include.url %}
-        </a>
-    {% endif %}
+<a href="{{ url }}">
+    <img src="{{ src }}" alt="{{ include.alt }}">
+</a>
     {% if include.caption %}
         <figcaption>{{ include.caption }}</figcaption>
     {% endif %}
